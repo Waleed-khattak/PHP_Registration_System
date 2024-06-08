@@ -1,0 +1,382 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: "Roboto", sans-serif;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body{
+    width: 100%;
+    font-family: "Roboto", sans-serif;
+    -webkit-tap-highlight-color: transparent;
+}
+
+header{
+    background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+    width: 100%;
+    height: 60px;
+}
+
+nav{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 5px 5px 16px rgba(0, 0, 0, 0.4);
+}
+
+nav .logo span{
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+nav .logo p{
+    color: orangered;
+    display: inline-block;
+}
+
+nav .list ul{
+    display: flex;
+    gap: 30px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+nav .list ul a{
+    color: black;
+    font-weight: bold;
+    transition: all .2s ease-in-out;
+    position: relative;
+}
+
+nav .list ul a:hover{
+    color: #fff;
+}
+
+nav .list ul a::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    bottom: -6px;
+    left: 0;
+    z-index: 1;
+    opacity: 1;
+    transform: scaleX(0);
+    transition: all .3s ease-in-out;
+}
+
+nav .list ul a:hover::after{
+    transform: scaleX(1);
+}
+
+main{
+    width: 100%;
+    height: calc(100vh - 200px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main .buttons h1{
+    margin-bottom: 35px;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 222;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.container div{
+    width: 350px;
+    background-color: #f0efef;
+    box-shadow: 3px 3px 13px rgba(0, 0, 0, 0.4);
+    border-radius: 7px;
+    padding: 15px;
+    position: relative;
+    margin: 0 20px;
+}
+
+.container div button{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    padding: 5px 7px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: orangered;
+}
+
+.container div h2{
+    text-align: center;
+    margin-bottom: 13px;
+}
+
+.container div form input{
+    width: 100%;
+    background: none;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid orangered;
+    padding: 10px 0;
+    margin: 10px 0;
+    border-radius: 1px;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+}
+
+.container div form input[type = "submit"]{
+    width: 100px;
+    background-color: orangered;
+    outline: none;
+    border: none;
+    border-radius: 7px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.hamburgar i{
+    position: absolute;
+    top: 16px;
+    right: 40px;
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+}
+
+@media  screen and (max-width: 700px) {
+    nav{
+        justify-content: space-between;
+        padding: 0 30px;
+    }
+    nav .list ul{
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 280px;
+        height: 100vh;
+        background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+        transition: all .3s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 4;
+        text-align: center;
+    }
+
+    nav .list ul a{
+        margin: 7px 0;
+        text-align: center;
+    }
+
+    .hamburgar i{
+        display: block;
+        z-index: 999;
+    }
+}
+
+/* CSS */
+.button-63 {
+  align-items: center;
+  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 19px 24px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.button-63:active,
+.button-63:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .button-63 {
+    font-size: 24px;
+    min-width: 196px;
+  }
+}
+
+/* CSS */
+.button-64 {
+  align-items: center;
+  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 19px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.button-64:active,
+.button-64:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .button-64 {
+    font-size: 24px;
+    min-width: 196px;
+  }
+}
+
+/* CSS */
+.button-77 {
+  align-items: center;
+  appearance: none;
+  background-clip: padding-box;
+  background-color: initial;
+  background-image: none;
+  border-style: none;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  flex-direction: row;
+  flex-shrink: 0;
+  font-family: Eina01,sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  justify-content: center;
+  line-height: 24px;
+  margin: 0;
+  min-height: 64px;
+  outline: none;
+  overflow: visible;
+  padding: 19px 26px;
+  pointer-events: auto;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  width: auto;
+  word-break: keep-all;
+  z-index: 0;
+}
+
+@media (min-width: 768px) {
+  .button-77 {
+    padding: 19px 32px;
+  }
+}
+
+.button-77:before,
+.button-77:after {
+  border-radius: 80px;
+}
+
+.button-77:before {
+  background-color: rgba(249, 58, 19, .32);
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -2;
+}
+
+.button-77:after {
+  background-color: initial;
+  background-image: linear-gradient(92.83deg, #ff7426 0, #f93a13 100%);
+  bottom: 4px;
+  content: "";
+  display: block;
+  left: 4px;
+  overflow: hidden;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  transition: all 100ms ease-out;
+  z-index: -1;
+}
+
+.button-77:hover:not(:disabled):after {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  transition-timing-function: ease-in;
+}
+
+.button-77:active:not(:disabled) {
+  color: #ccc;
+}
+
+.button-77:active:not(:disabled):after {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), linear-gradient(92.83deg, #ff7426 0, #f93a13 100%);
+  bottom: 4px;
+  left: 4px;
+  right: 4px;
+  top: 4px;
+}
+
+.button-77:disabled {
+  cursor: default;
+  opacity: .24;
+}
